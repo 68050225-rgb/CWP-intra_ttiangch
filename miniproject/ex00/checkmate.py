@@ -7,13 +7,6 @@ def checkmate(board:str):
      print("Fail")
      return
     
-    Size = len(kln)
-    King = None
-    for ln in kln:
-        if len(ln) != Size:
-            print("Fail")
-            return
-        
     for r in range(Size):
         for c in range(Size):
             if kln[r][c] == 'K':
