@@ -9,6 +9,11 @@ def checkmate(board:str):
     
     Size = len(kln)
     King = None
+    for ln in kln:
+        if len(ln) != Size:
+            print("Fail")
+            return
+        
     for r in range(Size):
         for c in range(Size):
             if kln[r][c] == 'K':
@@ -19,6 +24,7 @@ def checkmate(board:str):
     if not King:
         print("Fail")
         return
+    
     kr, kc = King
     pawn_atk = [(kr + 1, kc - 1), (kr + 1, kc + 1)]
     for r, c in pawn_atk:
